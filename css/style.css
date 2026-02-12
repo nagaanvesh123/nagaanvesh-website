@@ -1,0 +1,536 @@
+/* ===============================
+   RESET & GLOBAL
+================================ */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:#e2e8f0;
+    line-height:1.6;
+    perspective:1200px; /* Enables 3D */
+}
+
+section{
+    padding:80px 8%;
+}
+
+h1,h2,h3,h4{
+    font-weight:600;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#0f172a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    color:#e2e8f0;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    min-height:85vh;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h3{
+    color:#38bdf8;
+    font-weight:500;
+    margin-bottom:15px;
+}
+
+.hero-text h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#94a3b8;
+    max-width:600px;
+    margin-bottom:30px;
+}
+
+/* HERO BUTTONS */
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:12px 28px;
+    border-radius:6px;
+    font-weight:500;
+    transition:0.3s ease;
+    display:inline-block;
+}
+
+.btn-primary{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+.btn-primary:hover{
+    background:#0ea5e9;
+}
+
+.btn-outline{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.btn-outline:hover{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+/* HERO IMAGE */
+.hero-img{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-img img{
+    width:320px;
+    border-radius:12px;
+    animation:float 5s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+    0%{ transform:translateY(0px); }
+    50%{ transform:translateY(-15px); }
+    100%{ transform:translateY(0px); }
+}
+
+/* ===============================
+   3D CARD EFFECT
+================================ */
+.project-card,
+.cert-card,
+.contact-box{
+    transform-style:preserve-3d;
+    transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover,
+.cert-card:hover,
+.contact-box:hover{
+    transform:rotateY(6deg) rotateX(6deg) scale(1.03);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ===============================
+   PROJECTS
+================================ */
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:10px;
+}
+
+.project-card h3{
+    margin-bottom:10px;
+}
+
+.project-card p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* ===============================
+   SKILLS
+================================ */
+.skill{
+    margin-bottom:25px;
+}
+
+.skill-title{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:6px;
+}
+
+.progress{
+    height:8px;
+    background:#1e293b;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:8px;
+    background:#38bdf8;
+    width:0;
+    border-radius:10px;
+    transition:width 1.5s ease;
+}
+
+/* ===============================
+   EXPERIENCE TIMELINE
+================================ */
+.timeline{
+    position:relative;
+    margin-top:40px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    width:2px;
+    height:100%;
+    background:#38bdf8;
+}
+
+.timeline-item{
+    margin-left:60px;
+    margin-bottom:40px;
+}
+
+.timeline-item span{
+    font-size:14px;
+    color:#94a3b8;
+}
+
+/* ===============================
+   CERTIFICATIONS
+================================ */
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.cert-card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* ===============================
+   CONTACT
+================================ */
+.contact-box{
+    max-width:650px;
+    margin:40px auto;
+    background:#1e293b;
+    padding:40px;
+    border-radius:12px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid #334155;
+}
+
+.contact-item:last-child{
+    border-bottom:none;
+}
+
+.contact-item i{
+    color:#38bdf8;
+    font-size:20px;
+    width:30px;
+}
+
+.contact-item h4{
+    font-size:14px;
+    color:#94a3b8;
+}
+
+.contact-item a{
+    color:#e2e8f0;
+    transition:0.3s;
+}
+
+.contact-item a:hover{
+    color:#38bdf8;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.footer{
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(max-width:992px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-img img{
+        width:250px;
+    }
+
+    .timeline::before{
+        left:10px;
+    }
+
+    .timeline-item{
+        margin-left:40px;
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    
+
+    .hero-text h1{
+        font-size:34px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .contact-item{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .container{
+       max-width:1100px;
+       margin:auto;
+    }
+
+    .page-title{
+       font-size:36px;
+       margin-bottom:40px;
+       text-align:center;
+    }
+
+    .card ul{
+       padding-left:20px;
+       color:#94a3b8;
+    }
+}
+
+/* ===== PAGE WRAPPER ===== */
+.page-wrapper{
+    padding:140px 10% 80px;
+    min-height:100vh;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:60px;
+    text-align:center;
+}
+
+/* ===== GRID LAYOUT ===== */
+.cards-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
+}
+
+/* ===== CARD STYLE (Improved) ===== */
+.card{
+    background: rgba(255,255,255,0.06);
+    border-radius:25px;
+    padding:35px;
+    backdrop-filter: blur(20px);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.4s ease;
+}
+
+.card:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+}
+
+.card h2{
+    font-size:22px;
+    margin-bottom:20px;
+    color:#00f5ff;
+}
+
+.card p,
+.card li{
+    color:#cbd5e1;
+    font-size:16px;
+    line-height:1.7;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+/* ===== CONTACT PAGE ===== */
+
+.contact-card{
+    text-align:center;
+}
+
+.contact-icon{
+    font-size:40px;
+    margin-bottom:20px;
+    color:#00f5ff;
+}
+
+.contact-card a{
+    display:inline-block;
+    margin-top:10px;
+    color:#ffffff;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.contact-card a:hover{
+    color:#81b520;
+}
+
+/* ===== ACTIVE NAV LINK ===== */
+
+.nav-links a.active{
+    color: #00f5ff;
+    position: relative;
+}
+
+.nav-links a.active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #00f5ff;
+    border-radius: 2px;
+}
+
+/* ===== HIRE ME BUTTON EFFECT ===== */
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 14px 30px;
+    background: transparent;
+    color: #00f5ff;
+    font-weight: 600;
+    border: 2px solid #00f5ff;
+    border-radius: 8px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+/* Background sliding animation */
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: #00f5ff;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+/* Hover Effect */
+.btn:hover::before{
+    width: 100%;
+}
+
+.btn:hover{
+    color: #0f172a;
+    box-shadow: 0 0 15px #20b425,
+                0 0 30px rgba(44, 145, 203, 0.5);
+    transform: translateY(-3px);
+}
+
+
