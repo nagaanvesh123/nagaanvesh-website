@@ -697,3 +697,40 @@ a{
     gap: 35px;
 }
 
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-link .card {
+    transition: 0.3s ease;
+}
+
+.project-link .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 217, 255, 0.2);
+}
+
+/* ===== Back Button Styling ===== */
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #00d9ff;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #00d9ff;
+    color: #001f3f;
+    transform: translateX(-5px);
+    box-shadow: 0 8px 20px rgba(0, 217, 255, 0.3);
+}
+
