@@ -28,34 +28,35 @@
     </ul>
 </header>
 
-<section class="section">
+<section class="section blog-section">
   <h1>QA Insights & Articles</h1>
+  <div class="cards-grid">
+    <div class="card">
+      <h2>How to Reduce Defect Leakage in Agile Projects</h2>
+      <p>
+        In Agile projects, defect leakage can impact release quality.
+        A strong regression suite, early API validation and proper
+        BVT execution can significantly reduce production defects.
+      </p>
+    </div>
 
-  <div class="card">
-    <h2>How to Reduce Defect Leakage in Agile Projects</h2>
-    <p>
-      In Agile projects, defect leakage can impact release quality.
-      A strong regression suite, early API validation and proper
-      BVT execution can significantly reduce production defects.
-    </p>
-  </div>
+    <div class="card">
+      <h2>Importance of API Testing in Modern Applications</h2>
+      <p>
+        API Testing ensures backend reliability before UI validation.
+        Testing APIs using Postman helps validate request/response
+        structure, authentication and error handling.
+      </p>
+    </div>
 
-  <div class="card">
-    <h2>Importance of API Testing in Modern Applications</h2>
-    <p>
-      API Testing ensures backend reliability before UI validation.
-      Testing APIs using Postman helps validate request/response
-      structure, authentication and error handling.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Automotive IVI Testing Challenges</h2>
-    <p>
-      Automotive infotainment systems involve hardware-software
-      integration. System testing, log analysis and real-time validation
-      are critical for ensuring stable releases.
-    </p>
+    <div class="card">
+      <h2>Automotive IVI Testing Challenges</h2>
+      <p>
+        Automotive infotainment systems involve hardware-software
+        integration. System testing, log analysis and real-time validation
+        are critical for ensuring stable releases.
+      </p>
+    </div>
   </div>
 
 </section>
@@ -63,6 +64,53 @@
 <footer class="footer">
     © 2026 Naga Anvesh | QA Engineer
 </footer>
+
+<!-- ===== Automotive Tech Network Background ===== -->
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 100 },
+    color: { value: "#00d9ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.4 },
+    size: { value: 2.5 },
+    line_linked: {
+      enable: true,
+      distance: 130,
+      color: "#00d9ff",
+      opacity: 0.3,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1.5,
+      direction: "none",
+      out_mode: "out"
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab"
+      }
+    },
+    modes: {
+      grab: {
+        distance: 150,
+        line_linked: {
+          opacity: 0.6
+        }
+      }
+    }
+  },
+  retina_detect: true
+});
+</script>
 
 </body>
 </html>

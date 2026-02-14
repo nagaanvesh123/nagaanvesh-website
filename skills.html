@@ -97,5 +97,52 @@
     © 2026 Naga Anvesh | QA Engineer
 </footer>
 
+<!-- ===== Automotive Tech Network Background ===== -->
+<div id="particles-js"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 100 },
+    color: { value: "#00d9ff" },
+    shape: { type: "circle" },
+    opacity: { value: 0.4 },
+    size: { value: 2.5 },
+    line_linked: {
+      enable: true,
+      distance: 130,
+      color: "#00d9ff",
+      opacity: 0.3,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1.5,
+      direction: "none",
+      out_mode: "out"
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab"
+      }
+    },
+    modes: {
+      grab: {
+        distance: 150,
+        line_linked: {
+          opacity: 0.6
+        }
+      }
+    }
+  },
+  retina_detect: true
+});
+</script>
+
 </body>
 </html>

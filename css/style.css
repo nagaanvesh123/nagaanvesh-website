@@ -414,7 +414,7 @@ a{
 
 /* ===== GRID LAYOUT ===== */
 .cards-grid{
-    display:grid;
+    display:grid; 
     grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
     gap:40px;
 }
@@ -428,6 +428,11 @@ a{
     border:1px solid rgba(255,255,255,0.08);
     transition:0.4s ease;
 }
+
+.blog-section h1{
+    margin-bottom: 20px;
+}
+
 
 .card:hover{
     transform: translateY(-12px);
@@ -534,4 +539,161 @@ a{
     transform: translateY(-3px);
 }
 
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.navbar,
+.hero,
+.footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= CINEMATIC QA DASHBOARD BACKGROUND ================= */
+
+.dashboard-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0b132b, #001f3f);
+}
+
+
+
+
+/* Car Silhouette */
+.car-silhouette {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Car_silhouette.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.08;
+    bottom: 5%;
+    right: 5%;
+    animation: carFloat 12s ease-in-out infinite alternate;
+}
+
+/* Floating QA Text */
+.floating-text {
+    position: absolute;
+    color: #ff5e00;
+    font-size: 14px;
+    opacity: 0.15;
+    animation: floatText 18s ease-in-out infinite alternate;
+}
+
+.api-text {
+    top: 20%;
+    left: 10%;
+}
+
+.test-text {
+    bottom: 25%;
+    left: 20%;
+}
+
+.build-text {
+    top: 40%;
+    right: 15%;
+}
+
+/* Animations */
+
+@keyframes gridMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(-50px,-50px); }
+}
+
+@keyframes scanMove {
+    0% { top: 0; }
+    100% { top: 100%; }
+}
+
+@keyframes carFloat {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-30px); }
+}
+
+/* ================= BACKGROUND PNG ICONS ================= */
+
+.bg-icon {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.06;
+}
+
+
+/* Fleet / Automotive */
+.fleet {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/743/743922.png');
+    top: 15%;
+    left: 8%;
+}
+
+/* API Testing */
+.api-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1006/1006555.png');
+    top: 60%;
+    left: 15%;
+    animation-duration: 30s;
+}
+
+/* Web Testing */
+.web-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/906/906334.png');
+    top: 20%;
+    right: 10%;
+    animation-duration: 28s;
+}
+
+/* Mobile Testing */
+.mobile-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/747/747310.png');
+    bottom: 15%;
+    right: 20%;
+    animation-duration: 32s;
+}
+
+/* Bug Hunting */
+.bug-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/565/565547.png');
+    top: 45%;
+    left: 50%;
+    animation-duration: 26s;
+}
+
+/* Validation */
+.validation-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/190/190411.png');
+    bottom: 25%;
+    left: 35%;
+    animation-duration: 24s;
+}
+
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
 
