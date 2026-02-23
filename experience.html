@@ -10,9 +10,73 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* ===== VIDEO BACKGROUND ===== */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay */
+.video-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 15, 30, 0.75);
+    z-index: -1;
+}
+
+/* Content Styling – Same as IVI */
+.case-content {
+    padding: 120px 10%;
+    color: white;
+}
+
+.case-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.case-content h2 {
+    margin-top: 40px;
+    color: #00d9ff;
+}
+
+.case-content p {
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+.case-content ul {
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+</style>
+
 </head>
 
-<body>
+<body class="experience-page">
+
+        <!-- ===== VIDEO BACKGROUND ===== -->
+<div class="video-bg">
+    <video autoplay muted loop playsinline>
+        <source src="videos/experenced.mp4" type="video/mp4">
+    </video>
+</div>
 
 <!-- ✅ Consistent Navbar -->
 <header class="navbar">
@@ -44,12 +108,16 @@
 
                 <h3>Key Responsibilities</h3>
                 <ul>
-                    <li>Designed and executed 300+ detailed test cases for Automotive Infotainment (IVI) systems.</li>
-                    <li>Performed Smoke Testing, Regression Testing, Integration Testing and System Testing.</li>
-                    <li>Logged, tracked and managed 200+ defects using JIRA.</li>
+                    <li>Designed and executed 1000+ test cases for web, mobile, and Automotive Infotainment (IVI) systems, covering functional, regression, integration, and system testing.</li>
+                    <li>Logged and managed 250+ defects in JIRA, ensuring timely resolution and improved defect visibility.</li>
+                    <li>Validated REST APIs using Postman, ensuring backend data integrity and stability.</li>
                     <li>Validated REST APIs using Postman and ensured backend data integrity.</li>
-                    <li>Participated in Agile ceremonies including Sprint Planning, Daily Standups and Retrospectives.</li>
-                    <li>Executed Build Verification Testing (BVT) before release deployments.</li>
+                    <li>Performed Build Verification Testing (BVT), smoke testing, and OTA (Over-the-Air) update validation to strengthen release confidence</li>
+                    <li>Conducted flashing of hardware CDCs (Control Domain Controllers) and automotive modules, simulated CAN/LIN signals, and validated IVI features across audio, radio, navigation, SPCX, and media.</li>
+                    <li>Captured and analyzed system logs for debugging and root cause investigation of intermittent issues.</li>
+                    <li>Participated in Agile ceremonies (Sprint Planning, Standups, Retrospectives) and collaborated with cross-functional teams to resolve issues.</li>
+                    <li>Attended client calls to address defects and debugging needs, building trust through transparent communication.</li>
+                    <li>Delivered Knowledge Transfer (KT) sessions, ensuring smooth onboarding, skill development, and process continuity within the QA team.</li>
                 </ul>
 
                 <h3>Impact & Achievements</h3>
@@ -58,6 +126,10 @@
                     <li>Reduced regression leakage through structured test planning.</li>
                     <li>Enhanced API validation coverage and stability.</li>
                     <li>Contributed to improved release quality and customer satisfaction.</li>
+                    <li>Validated OTA (Over-the-Air) update flows, ensuring seamless and reliable automotive software upgrades.</li>
+                    <li>Strengthened Automotive IVI testing across audio, radio, navigation, SPCX, and media features, improving end-user experience.</li>
+                    <li>Streamlined defect tracking and reporting, enabling faster resolution and better collaboration with development teams.</li>
+                    <li>Increased test coverage by applying diverse manual testing techniques, reducing risk of missed defects.</li>
                 </ul>
             </div>
 

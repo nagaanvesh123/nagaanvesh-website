@@ -413,11 +413,21 @@ a{
 }
 
 /* ===== GRID LAYOUT ===== */
-.cards-grid{
-    display:grid; 
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    gap:40px;
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes button to bottom */
+    height: 100%;
+    padding: 25px;
+    border-radius: 15px;
+}
+
 
 /* ===== CARD STYLE (Improved) ===== */
 .card{
@@ -734,3 +744,96 @@ a{
     box-shadow: 0 8px 20px rgba(0, 217, 255, 0.3);
 }
 
+
+
+/* Certificate button style */
+.btn-certificate {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: #ffffff;            /* White text */
+    text-decoration: none;     /* Remove underline */
+    border-radius: 5px;        /* Rounded corners */
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-certificate:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-wrapper {
+    margin-top: auto; /* Pushes button to bottom */
+}
+
+.btn-certificate {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1e90ff, #0066ff);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-certificate:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Base Card */
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* 🔥 Background Glow Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),   /* normal shadow */
+        0 0 40px rgba(0, 217, 255, 0.6);  /* blue glow */
+}
+
+/* Make project cards clearly clickable */
+.project-link {
+    text-decoration: none;
+    display: block;
+}
+
+.project-link .card {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+
+/* Strong hover effect only for project cards */
+.project-link:hover .card {
+    transform: translateY(-12px) scale(1.02);
+    border: 2px solid #00d9ff;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(0, 217, 255, 0.8);
+}
+
+.project-hint {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #f5c542 !important;
+    opacity: 0.8;
+    transition: all 1s ease;
+}
+
+/* Make it slightly animate on hover */
+.project-link:hover .project-hint {
+    opacity: 1;
+    transform: translateX(6px);
+}
