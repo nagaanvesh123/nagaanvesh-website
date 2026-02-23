@@ -415,22 +415,19 @@ a{
 /* ===== GRID LAYOUT ===== */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    align-items: stretch;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Pushes button to bottom */
-    height: 100%;
-    padding: 25px;
-    border-radius: 15px;
-}
+
 
 
 /* ===== CARD STYLE (Improved) ===== */
 .card{
+    height:100%;
+    display: flex;
+    flex-direction: column;
     background: rgba(255,255,255,0.06);
     border-radius:25px;
     padding:35px;
@@ -458,8 +455,13 @@ a{
 .card p,
 .card li{
     color:#cbd5e1;
+    margin-bottom: 5px;
     font-size:16px;
     line-height:1.7;
+}
+
+.certificates-page p{
+    margin-bottom: 10px;
 }
 
 .card ul{
@@ -763,7 +765,7 @@ a{
     background-color: #0056b3; /* Darker blue on hover */
 }
 
-.btn-wrapper {
+.btn-certificate {
     margin-top: auto; /* Pushes button to bottom */
 }
 
@@ -786,7 +788,7 @@ a{
 /* Base Card */
 .card {
     position: relative;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(25, 35, 60, 0.92);
     backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 25px;
@@ -837,3 +839,4 @@ a{
     opacity: 1;
     transform: translateX(6px);
 }
+
